@@ -1,0 +1,14 @@
+grant {
+        permission java.net.SocketPermission "*", "accept,resolve";
+        permission java.io.FilePermission "src/main/resources/application.config", "read";
+            permission java.io.FilePermission "src/main/resources/testkeys.jks", "read";
+            permission java.net.SocketPermission "*:1024-", "accept, connect, listen, resolve";
+            permission java.lang.RuntimePermission "setFactory";
+            permission java.lang.RuntimePermission "accessClassInPackage.*";
+            permission java.util.PropertyPermission "javax.net.ssl.debug", "write";
+            permission java.util.PropertyPermission "javax.net.ssl.keyStore", "write";
+            permission java.util.PropertyPermission "javax.net.ssl.keyStorePassword", "write";
+            permission java.util.PropertyPermission "javax.net.ssl.trustStore", "write";
+            permission java.util.PropertyPermission "javax.net.ssl.trustStorePassword", "write";
+
+};
